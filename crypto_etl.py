@@ -8,7 +8,7 @@ load_dotenv()
 #print("USER:", repr(os.getenv("DB_USER")), "| PASS set:", os.getenv("DB_PASSWORD") is not None)
 engine = create_engine('postgresql+psycopg2://avnadmin:AVNS_mTnl05XSnDdiXB6-yzC@pg-20b3dd5-wangarichiiraq-6d5e.a.aivencloud.com:26444/defaultdb?sslmode=require')
 
-COINS = ["btc-bitcoin"]
+COINS = ["btc-bitcoin", "eth-ethereum", "xrp-xrp", "sol-solana", "ada-cardano"]
 
 for coin_id in COINS:
     url = f"https://api.coinpaprika.com/v1/tickers/{coin_id}"
